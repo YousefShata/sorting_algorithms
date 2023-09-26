@@ -21,6 +21,7 @@ void quick_sort(int *array, size_t size)
  * @array: input array
  * @low: start index
  * @high: end index
+ * @size: size of the array
  * Return: The index of the pivot
  */
 size_t partition(int *array, size_t low, size_t high, size_t size)
@@ -55,6 +56,7 @@ size_t partition(int *array, size_t low, size_t high, size_t size)
  * @array:input array
  * @low:start index
  * @high: last index
+ * @size: size of the array
  * Return: Nothing
  */
 void qS(int *array, size_t low, size_t high, size_t size)
@@ -64,9 +66,9 @@ void qS(int *array, size_t low, size_t high, size_t size)
 	if (low < high)
 	{
 		partitionIndex = partition(array, low, high, size);
-		if(partitionIndex != 0)
+		if (partitionIndex != 0)
 			qS(array, low, partitionIndex - 1, size);
-		if(partitionIndex < size - 1)
+		if (partitionIndex < size - 1)
 			qS(array, partitionIndex + 1, high, size);
 	}
 }
