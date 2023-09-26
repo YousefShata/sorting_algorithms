@@ -18,14 +18,14 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[j] < array[courier])
 				courier = j;
+		}
 
-			if (courier != i)
-			{
-				tmp = array[courier];
-				array[courier] = array[i];
-				array[i] = tmp;
-				print_array(array, size);
-			}
+		if (courier != i)
+		{
+			tmp = array[courier];
+			array[courier] = array[i];
+			array[i] = tmp;
+			print_array(array, size);
 		}
 	}
 }
